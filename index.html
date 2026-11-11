@@ -14,9 +14,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="intro.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="intro-screen" id="intro-screen" role="status" aria-label="Opening PingWallet" aria-hidden="false">
+      <div class="intro-atmosphere" aria-hidden="true"></div>
+      <svg class="intro-filters" aria-hidden="true" focusable="false">
+        <filter id="liquid-refraction" x="-35%" y="-35%" width="170%" height="170%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.018 0.042" numOctaves="2" seed="8" result="water">
+            <animate attributeName="baseFrequency" dur="1.9s" values="0.018 0.042;0.035 0.02;0.012 0.05" repeatCount="indefinite" />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="water" scale="18" xChannelSelector="R" yChannelSelector="G" result="bent" />
+          <feColorMatrix in="bent" type="matrix" values="1 0 0 0 0.06  0 1 0 0 0.12  0 0 1 0 0.02  0 0 0 1 0" result="prism" />
+          <feGaussianBlur in="prism" stdDeviation="0.18" />
+        </filter>
+      </svg>
+      <div class="intro-drop" aria-hidden="true"><span></span></div>
+      <div class="intro-lockup">
+        <div class="intro-glass-tile">
+          <div class="intro-glass-shine" aria-hidden="true"></div>
+          <svg class="intro-signal" viewBox="0 0 48 48" role="img" aria-label="PingWallet signal mark">
+            <path class="signal-ghost signal-ghost-cyan" d="M5 24h10l4-12 7 24 4-12h13" />
+            <path class="signal-ghost signal-ghost-lime" d="M5 24h10l4-12 7 24 4-12h13" />
+            <path class="signal-main" d="M5 24h10l4-12 7 24 4-12h13" />
+            <circle cx="5" cy="24" r="2.5" /><circle cx="43" cy="24" r="2.5" />
+          </svg>
+        </div>
+        <div class="intro-wordmark">ping<span>wallet</span></div>
+        <div class="intro-caption"><i></i> CONNECTING TO THE SIGNAL <span class="intro-caption-line"></span></div>
+      </div>
+      <div class="intro-loader" aria-hidden="true"><span></span></div>
+      <span class="intro-index mono" aria-hidden="true">PINGWALLET <b>·</b> ON-CHAIN MONITORING</span>
+    </div>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="announcement"><span class="announce-dot"></span><span>Early access pricing</span><span class="announce-sep">/</span><span>Save up to 40% with yearly billing</span><a href="#pricing">See plans <span aria-hidden="true">↗</span></a></div>
     <header class="site-header">
