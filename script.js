@@ -1,3 +1,25 @@
+const introScreen = document.querySelector("#intro-screen");
+if (introScreen) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let introSeen = false;
+  try {
+    introSeen = sessionStorage.getItem("pingwallet-intro-seen") === "1";
+    if (!introSeen) sessionStorage.setItem("pingwallet-intro-seen", "1");
+  } catch {
+    // If storage is unavailable, keep the one-time reveal for this page load.
+  }
+
+  if (introSeen || reducedMotion) {
+    introScreen.classList.add("is-skipped");
+    introScreen.setAttribute("aria-hidden", "true");
+  } else {
+    window.setTimeout(() => {
+      introScreen.setAttribute("aria-hidden", "true");
+      window.setTimeout(() => introScreen.classList.add("is-finished"), 850);
+    }, 2960);
+  }
+}
+
 const prices = {
   monthly: { ping250: "0.17", ping500: "0.30", ping1000: "0.55", label: "per month" },
   quarterly: { ping250: "0.45", ping500: "0.80", ping1000: "1.45", label: "per 3 months" },
