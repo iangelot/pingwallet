@@ -17,7 +17,7 @@ Open `index.html` in a browser or serve this folder with any static file server.
 
 ## Design source
 
-The animated wallet-led hero takes direction from 21st.dev's **Crypto hero** component (demo 8759). The atmospheric dark blue/black gradient, grain, and vignette treatment are adapted from 21st.dev's **Dark Blue Hero gradient** component (demo 27274). The final implementation is framework-free and tuned to PingWallet's product, content, and static hosting constraints.
+The hero now pairs the real Telegram bot screenshot with a subdued custom canvas laser sweep, adapting the visual direction of 21st.dev's **Laser Flow** component while keeping the site framework-free. The atmospheric dark blue/black gradient, grain, and vignette treatment are adapted from 21st.dev's **Dark Blue Hero gradient** component (demo 27274). The final implementation is framework-free and tuned to PingWallet's product, content, and static hosting constraints.
 
 The intro references 21st.dev's **Liquid Glass Logo Reveal** by `shepovalovdenis` (demo 43085): a droplet lands, forms a refractive glass tile, reveals the product mark, then releases into the page. The implementation uses CSS and an SVG turbulence/displacement filter; it plays once per tab session and respects reduced-motion preferences.
 

@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="intro.css" />
+    <link rel="stylesheet" href="laser-flow.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -60,28 +61,21 @@
       <section class="hero" id="top">
         <div class="hero-backdrop" aria-hidden="true"><div class="hero-glow"></div><div class="hero-grid"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-grain"></div></div>
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="live-pulse"></span> On-chain, in real time <span class="eyebrow-line"></span><span class="mono">01 / 06 chains</span></div>
-          <h1>Know when<br />wallets <span class="headline-accent">move.</span></h1>
-          <p class="hero-description">The wallets you watch don’t wait. Get their swaps, transfers, and buys delivered to Telegram while they’re still relevant.</p>
-          <div class="hero-ctas"><a class="button button-lime button-large" href="https://t.me/PingWallet_bot?start=plan_starter">Start tracking free <span class="button-arrow">↗</span></a><a class="text-link" href="#how">See how it works <span>↓</span></a></div>
-          <div class="hero-assurance"><span><i class="tiny-check">✓</i> Public addresses only</span><span><i class="tiny-check">✓</i> Never asks for keys</span><span><i class="tiny-check">✓</i> Ready in 60 seconds</span></div>
+          <div class="eyebrow"><span class="live-pulse"></span> Wallet activity, delivered <span class="eyebrow-line"></span><span class="mono">TELEGRAM BOT</span></div>
+          <h1>Follow the wallets.<br /><span class="headline-accent">Skip the refresh.</span></h1>
+          <p class="hero-description">PingWallet watches public addresses and sends the trades, transfers, and on-chain changes that matter straight to your Telegram.</p>
+          <div class="hero-ctas"><a class="button button-lime button-large" href="https://t.me/PingWallet_bot?start=plan_starter">Open PingWallet <span class="button-arrow">↗</span></a><a class="text-link" href="#how">How it works <span>↓</span></a></div>
+          <div class="hero-assurance"><span><i class="tiny-check">✓</i> Public addresses only</span><span><i class="tiny-check">✓</i> Read-only by design</span><span><i class="tiny-check">✓</i> No wallet connection</span></div>
         </div>
 
-        <div class="signal-stage reveal" aria-label="Preview of PingWallet Telegram alerts">
-          <div class="stage-label"><span class="stage-label-dot"></span> LIVE SIGNAL PREVIEW <span class="stage-label-line"></span><span class="mono">SOL / 04:28:16 UTC</span></div>
-          <div class="signal-window">
-            <div class="window-top"><div class="window-brand"><span class="mini-mark">p.</span><span>PingWallet <span class="bot-tag">BOT</span></span></div><span class="window-status"><i></i> monitoring</span><button class="more-button" aria-label="More options">···</button></div>
-            <div class="window-body">
-              <div class="window-date">TODAY <span></span></div>
-              <article class="alert-card alert-main"><div class="alert-head"><span class="signal-icon buy-icon">↗</span><div><strong>New buy detected</strong><small>Smart money · just now</small></div><span class="alert-chain sol-chain">SOL</span></div><div class="alert-token"><div class="token-badge">M</div><div class="token-name"><strong>MOONCAT</strong><span>$MOON · Solana</span></div><div class="token-price"><strong>$0.00482</strong><span class="positive">+18.6%</span></div></div><div class="alert-metrics"><div><span>BUY AMOUNT</span><strong>42.8 <small>SOL</small></strong></div><div><span>MARKET CAP</span><strong>$4.82M</strong></div><div><span>WALLET</span><strong class="mono">7xQp…a91K <b class="copy-glyph">▢</b></strong></div></div><div class="alert-footer"><span class="verified-mark">✓</span> Followed wallet <strong>◎ Whale scout #4</strong><a href="#features" aria-label="View alert details">↗</a></div></article>
-              <article class="alert-card alert-secondary"><div class="alert-head"><span class="signal-icon swap-icon">⇄</span><div><strong>Swap completed</strong><small>6 seconds ago · Ethereum</small></div><span class="alert-chain eth-chain">ETH</span></div><div class="swap-line"><span class="coin-chip eth-coin">◆</span><strong>2.40 ETH</strong><span class="swap-arrow">→</span><span class="coin-chip usdc-coin">$</span><strong>8,246 USDC</strong><span class="positive swap-pnl">+2.1%</span></div></article>
-              <div class="typing-row"><span class="typing-dots"><i></i><i></i><i></i></span><span>PingWallet is watching <b>248 wallets</b></span><span class="typing-time">now</span></div>
-            </div>
-            <div class="window-bottom"><span><i></i> 6 chains connected</span><span class="mono">LATENCY 0.8S</span></div>
-          </div>
-          <div class="float-note note-speed"><span class="note-pulse"></span><div><b>0.8 sec</b><small>signal to Telegram</small></div><span class="note-wave">⌁</span></div>
-          <div class="float-note note-wallet"><span class="wallet-note-icon">◎</span><div><b>New wallet added</b><small>0x83…c04F · Base</small></div><span class="note-plus">+</span></div>
-          <div class="stage-caption"><span class="mono">FIG. 01</span> What a useful alert looks like.</div>
+        <div class="laser-stage reveal" aria-label="Screenshot of the PingWallet Telegram bot">
+          <canvas class="laser-flow-canvas" id="laser-flow" aria-hidden="true"></canvas>
+          <div class="laser-label"><span class="laser-label-dot"></span> A LOOK INSIDE THE BOT <span class="mono">LIVE IN TELEGRAM</span></div>
+          <figure class="bot-preview-surface" id="bot-preview-surface">
+            <div class="bot-preview-image"><img src="bot-screenshot.png" alt="PingWallet Telegram bot with wallet alerts and controls for adding wallets, setting thresholds, and opening the web dashboard" /></div>
+            <figcaption><span><i></i> PingWallet Tracker Bot</span><span class="mono">SOLANA · EVM · TRON</span></figcaption>
+          </figure>
+          <div class="laser-caption"><span class="mono">01 / PRODUCT VIEW</span><span>Alerts and controls, where you already chat.</span></div>
         </div>
         <div class="hero-bottom"><span class="mono">BUILT FOR THE ON-CHAIN CURIOUS</span><div class="chain-list"><span><i class="chain-sol">◎</i> Solana</span><span><i class="chain-eth">◆</i> Ethereum</span><span><i class="chain-bnb">◉</i> BNB Chain</span><span><i class="chain-base">◉</i> Base</span><span><i class="chain-tron">◈</i> Tron</span><span><i class="chain-rh">R</i> Robinhood</span></div><a href="#features">6 chains <span>↗</span></a></div>
       </section>
