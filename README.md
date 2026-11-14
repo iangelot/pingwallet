@@ -1,6 +1,6 @@
 # PingWallet redesign
 
-A responsive, single-page redesign for PingWallet, a Telegram-first public wallet monitoring service. The hero follows the supplied references: an editorial two-line headline, spacious dark grid, a vertical violet beam, and a wide recreated Telegram bot interface. The supplied bot screenshot is used as LaserFlow's cursor reveal image.
+A responsive, single-page redesign for PingWallet, a Telegram-first public wallet monitoring service. The hero follows the supplied references: a display/body/mono font pairing, spacious dark grid, vivid violet beam, and a wide recreated Telegram bot interface. The supplied bot screenshot is used as LaserFlow's cursor reveal image. Demo activity is explicitly labeled, and unsupported service metrics and the invented testimonial have been removed.
 
 ## Run locally
 
