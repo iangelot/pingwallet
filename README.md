@@ -1,25 +1,23 @@
 # PingWallet redesign
 
-A responsive, single-page redesign for PingWallet, a Telegram-first public wallet monitoring service. The page keeps the existing product positioning and current public plan details while introducing a darker, more considered visual system built around on-chain signal, motion, and a live alert preview.
+A responsive, single-page redesign for PingWallet, a Telegram-first public wallet monitoring service. This version uses the supplied purple PingWallet mark and Telegram bot screenshot, with a vertical violet LaserFlow impact in the hero.
 
 ## Run locally
 
-Open `index.html` in a browser or serve this folder with any static file server. There are no build steps or runtime dependencies.
+Open `index.html` through a static file server. The original page stays plain HTML, CSS, and JavaScript; the hero effect mounts React Bits LaserFlow from browser ES modules (React 18 is loaded from esm.sh), so it needs an internet connection. No build step is required.
 
 ## Interactions
 
 - Monthly, quarterly, and yearly plan pricing toggle
 - Responsive navigation menu
 - Single-open FAQ accordion
-- Scroll reveal and subtle motion, with reduced-motion support
-- One-time liquid glass logo reveal on the first page view of each browser tab
-- Telegram links for free signup and the published plan deep links
+- Scroll reveal with reduced-motion support
+- One-time liquid-glass logo reveal per browser tab
+- React Bits LaserFlow mounted over the Telegram bot screenshot, using the configured purple beam and reveal effect
+- Telegram links for signup and plan deep links
 
-## Design source
+## Design sources
 
-The hero now pairs the real Telegram bot screenshot with a subdued custom canvas laser sweep, adapting the visual direction of 21st.dev's **Laser Flow** component while keeping the site framework-free. The atmospheric dark blue/black gradient, grain, and vignette treatment are adapted from 21st.dev's **Dark Blue Hero gradient** component (demo 27274). The final implementation is framework-free and tuned to PingWallet's product, content, and static hosting constraints.
+The LaserFlow shader is adapted from the JavaScript + CSS source supplied for the [React Bits LaserFlow component](https://reactbits.dev/). Its hero props use the requested violet beam, intensity, surface spill, reveal image, and motion settings. The liquid-glass logo reveal takes direction from 21st.dev's **Liquid Glass Logo Reveal** by `shepovalovdenis` (demo 43085), implemented with CSS and an SVG displacement filter.
 
-The intro references 21st.dev's **Liquid Glass Logo Reveal** by `shepovalovdenis` (demo 43085): a droplet lands, forms a refractive glass tile, reveals the product mark, then releases into the page. The implementation uses CSS and an SVG turbulence/displacement filter; it plays once per tab session and respects reduced-motion preferences.
-
-Product claims and pricing were checked against the live PingWallet site at the time this redesign was prepared. Confirm operational metrics and plan prices before future updates.
-
+Product claims and pricing should be confirmed against PingWallet before publication.
