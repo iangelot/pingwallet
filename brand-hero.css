@@ -31,7 +31,7 @@ body{background:var(--ink);color:var(--text)}
 @media(prefers-reduced-motion:reduce){.hero-laser-root{display:none}}
 
 /* Editorial type, stronger product contrast, and a clear gap between copy and demo. */
-:root{--ink:#09070d;--surface:#120e18;--surface-2:#1b1423;--line:#30253c;--line-light:#49355d;--text:#fbf7ff;--soft:#e8dff0;--muted:#b3a7bd;--dim:#85778f;--lime:#a855f7;--lime-dark:#7c3aed;--teal:#d946ef;--sans:"DM Sans",sans-serif;--display:"Syne",sans-serif;--mono:"IBM Plex Mono",monospace}
+:root{--ink:#09070d;--surface:#120e18;--surface-2:#1b1423;--line:#30253c;--line-light:#49355d;--text:#fbf7ff;--soft:#e8dff0;--muted:#b3a7bd;--dim:#85778f;--lime:#a855f7;--lime-dark:#7c3aed;--teal:#d946ef;--sans:"General Sans",sans-serif;--display:"Cabinet Grotesk",sans-serif;--mono:"IBM Plex Mono",monospace}
 body{font-family:var(--sans);background:#09070d;color:#f7f2fb}
 .site-header{background:rgba(9,7,13,.96);border-bottom-color:rgba(194,162,226,.13)}
 .main-nav a,.login-link{font-family:var(--sans);font-size:12px;color:#c1b5cb}.main-nav a:hover,.login-link:hover{color:#d58cff}
@@ -58,4 +58,18 @@ body{font-family:var(--sans);background:#09070d;color:#f7f2fb}
 @media(max-width:760px){.hero{min-height:1120px}.hero-copy{margin:0 24px;padding-top:75px}.hero h1{font-size:clamp(52px,9.5vw,76px)}.bot-preview-surface{top:540px;width:92%;height:500px;bottom:auto}.steps-grid{display:block}.step-card,.step-card+.step-card{grid-template-columns:42px 1fr;gap:8px 14px;padding:18px 0}.step-number{grid-row:span 2}.step-card p{grid-column:2}.step-foot{grid-column:2;justify-self:start;margin-top:4px}}
 @media(max-width:480px){.hero{min-height:1090px}.hero-copy{margin:0 20px;padding-top:58px}.hero h1{font-size:clamp(44px,11vw,56px);line-height:1.03}.hero-description{margin-top:16px;font-size:12px}.hero-ctas{margin-top:19px}.bot-preview-surface{top:510px;width:94%;height:470px}.product-window-bar{height:42px}.product-window-body{height:calc(100% - 42px)}.product-brand{font-size:10px}.product-brand img{width:18px;height:18px}.product-window-status{font-size:7px}.chat-topline{height:45px}.chat-bubble{font-size:7px}.bot-keyboard button{font-size:6px}.watch-count{padding:10px}.product-details{padding:12px}}
 @media(prefers-reduced-motion:reduce){.hero-laser-root{display:none}}
+
+/* Header floats over the hero so the violet beam has an uninterrupted origin. */
+.site-header{position:absolute;z-index:20;top:0;left:0;right:0;width:100%;max-width:none;height:74px;padding-inline:max(calc((100vw - 1380px)/2),5vw);border:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important}
+.site-header .main-nav{background:transparent}
+.network-logo svg{display:block;width:30px;height:30px}
+.network-logo.sol-logo svg{width:38px;height:38px}
+.network-tags>span{display:inline-flex;align-items:center;gap:5px}
+.network-tags svg,.plan-chains svg{display:block;width:14px;height:14px}
+.network-tags svg{width:13px;height:13px}
+.plan-chains svg{width:16px;height:16px}
+@media(max-width:760px){.site-header{position:absolute;height:64px;padding-inline:20px}.main-nav{background:#100e17!important;border-bottom-color:#30253c!important}.network-logo svg{width:27px;height:27px}}
+
+.network-proof{max-width:1380px;margin:0 auto;min-height:126px;padding:28px 6vw;display:grid;grid-template-columns:180px 1fr;align-items:center;gap:40px;border-bottom:1px solid #2b2435;background:#0b0911}.network-proof>p{margin:0;color:#aaa1b2;font:500 12px 'General Sans',sans-serif}.network-proof>div{display:flex;align-items:center;justify-content:space-between;gap:24px}.network-proof>div>span{display:inline-flex;align-items:center;gap:10px;color:#d1c9d9;font:500 13px 'General Sans',sans-serif;white-space:nowrap}.network-proof svg{width:25px;height:25px;flex:none;opacity:.85}.network-proof>div>span:nth-child(3) svg,.network-proof>div>span:nth-child(5) svg{width:22px;height:22px}@media(max-width:760px){.network-proof{min-height:0;padding:27px 22px;display:block}.network-proof>p{margin-bottom:18px}.network-proof>div{justify-content:flex-start;flex-wrap:wrap;gap:16px 22px}.network-proof>div>span{font-size:11px;gap:7px}.network-proof svg{width:22px;height:22px}}
+
 
